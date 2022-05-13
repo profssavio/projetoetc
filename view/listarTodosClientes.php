@@ -46,7 +46,7 @@ foreach ( $clientes as $cliente ) {
     echo "  <td> {$cliente["perfil"]} </td>";
     echo "  <td class='text-center'> {$cliente["situacao"]} </td>";
     echo "  <td align='center'><a href='../controller/excluirClienteController.php?id={$cliente["id"]}'><i class='fa-solid fa-trash-can'></a></i></td>";
-    echo "  <td align='center'><a href='formAlterarCliente.php?id={$cliente["id"]}'><i class='fa-solid fa-pen-to-square'></a></i></td>";
+    echo "  <td align='center'><a href='formAlterarCliente.php?id={$cliente["id"]}&&'><i class='fa-solid fa-pen-to-square'></a></i></td>";
     echo "</tr>";
 }
 echo "</tbody>";
