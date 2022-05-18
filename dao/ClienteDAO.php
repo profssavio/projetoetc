@@ -7,7 +7,7 @@ class ClienteDAO {
     private $usuarioDAO;
 
     public function __construct() {
-        $this->pdo = Conexao::getInstance();
+        $this->pdo        = Conexao::getInstance();
         $this->usuarioDAO = new UsuarioDAO();
     }
 
@@ -66,7 +66,7 @@ class ClienteDAO {
             $this->pdo->beginTransaction();
             $cliente = $this->findById( $idCliente );
 
-            $sql = 'DELETE FROM tb_cliente WHERE id = ?';
+            $sql  = 'DELETE FROM tb_cliente WHERE id = ?';
             $stmt = $this->pdo->prepare( $sql );
             $stmt->bindValue( 1, $idCliente );
             $stmt->execute();
@@ -83,7 +83,7 @@ class ClienteDAO {
     public function findById( $id ) {
         try {
             $sql = 'SELECT '
-                . 'c.id,c.foto,c.nome,c.usuario, c.cpf,c.datanascimento,c.sexo,c.telefone,c.situacao,'
+                . 'c.id,c.foto,c.nome,c.usuario, u.senha, c.cpf,c.datanascimento,c.sexo,c.telefone,c.situacao,'
                 . 'u.email, u.perfil as idperfil, p.perfil '
                 . 'FROM tb_cliente c '
                 . 'INNER JOIN tb_usuario u ON c.usuario = u.id '
@@ -138,7 +138,7 @@ class ClienteDAO {
 
     public function findByCpf( $cpf ) {
         try {
-            $sql = 'SELECT * FROM tb_cliente WHERE cpf = ?';
+            $sql  = 'SELECT * FROM tb_cliente WHERE cpf = ?';
             $stmt = $this->pdo->prepare( $sql );
             $stmt->bindValue( 1, $cpf );
             $stmt->execute();
@@ -151,7 +151,7 @@ class ClienteDAO {
 
     public function findAllPerfil() {
         try {
-            $sql = 'SELECT * FROM tb_perfil';
+            $sql  = 'SELECT * FROM tb_perfil';
             $stmt = $this->pdo->prepare( $sql );
             $stmt->execute();
             $perfils = $stmt->fetchAll( PDO::FETCH_ASSOC );

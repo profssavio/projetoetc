@@ -12,12 +12,12 @@
 
 <body>
     <?php
-require_once '../dao/ClienteDAO.php';
-$idCliente = $_GET['id'];
-$clienteDAO = new ClienteDAO();
-$cliente = $clienteDAO->findById( $idCliente );
-$perfils = $clienteDAO->findAllPerfil();
-?>
+        require_once '../dao/ClienteDAO.php';
+        $idCliente  = $_GET['id'];
+        $clienteDAO = new ClienteDAO();
+        $cliente    = $clienteDAO->findById( $idCliente );
+        $perfils    = $clienteDAO->findAllPerfil();
+    ?>
 
     <div class="container">
         <div class="col-md-12 mt-5">
@@ -106,6 +106,7 @@ $perfils = $clienteDAO->findAllPerfil();
                         <div class="mb-3">
                             <label for="senha" class="form-label">Digite uma nova senha</label>
                             <input type="password" class="form-control" name="senha" id="senha">
+                            <input type="hidden" name="vsenha" value="<?php echo $cliente['senha'] ?>">
                         </div>
                     </div>
                     <div class="col-3">
@@ -114,14 +115,14 @@ $perfils = $clienteDAO->findAllPerfil();
                             <select id="perfil" name="perfil" class="form-select">
                                 <option selected>Selecione...</option>
                                 <?php
-foreach ( $perfils as $p ) {
-    if ( $cliente['idperfil'] = $p['id'] ) {
-        echo "<option value='{$p['id']}' selected>{$p['perfil']}</option>";
-    } else {
-        echo "<option value='{$p['id']}'>{$p['perfil']}</option>";
-    }
-}
-?>
+                                    foreach ( $perfils as $p ) {
+                                        if ( $cliente['idperfil'] = $p['id'] ) {
+                                            echo "<option value='{$p['id']}' selected>{$p['perfil']}</option>";
+                                        } else {
+                                            echo "<option value='{$p['id']}'>{$p['perfil']}</option>";
+                                        }
+                                    }
+                                ?>
                             </select>
                         </div>
                     </div>
