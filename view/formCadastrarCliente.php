@@ -14,10 +14,10 @@
 
 <body>
     <?php
-require_once '../dao/ClienteDAO.php';
-$clienteDAO = new ClienteDAO();
-$perfils = $clienteDAO->findAllPerfil();
-?>
+        require_once '../dao/ClienteDAO.php';
+        $clienteDAO = new ClienteDAO();
+        $perfils    = $clienteDAO->findAllPerfil();
+    ?>
     <div class="container">
         <div class="col-md-12 mt-3">
             <form id="formCadastroCliente" enctype="multipart/form-data"
@@ -25,7 +25,7 @@ $perfils = $clienteDAO->findAllPerfil();
                 <div class="row">
                     <div class="col-6">
                         <div class="mb-3">
-                            <label for="nome" class="form-label">Nome</label>
+                            <label for="nome" class="form-label">Nome *</label>
                             <input type="text" class="form-control" id="nome" name="nome"
                                 placeholder="Digite o seu nome" required>
                         </div>
@@ -92,10 +92,10 @@ $perfils = $clienteDAO->findAllPerfil();
                             <select id="perfil" name="perfil" class="form-select">
                                 <option selected>Selecione...</option>
                                 <?php
-foreach ( $perfils as $p ) {
-    echo "<option value='{$p['id']}'>{$p['perfil']}</option>";
-}
-?>
+                                    foreach ( $perfils as $p ) {
+                                        echo "<option value='{$p['id']}'>{$p['perfil']}</option>";
+                                    }
+                                ?>
                             </select>
                         </div>
                     </div>
@@ -116,10 +116,10 @@ foreach ( $perfils as $p ) {
         </div>
 
         <?php
-if ( isset( $_GET['msg'] ) ) {
-    echo $_GET['msg'];
-}
-?>
+            if ( isset( $_GET['msg'] ) ) {
+                echo $_GET['msg'];
+            }
+        ?>
     </div>
 
 
