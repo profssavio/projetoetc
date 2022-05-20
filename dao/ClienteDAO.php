@@ -104,7 +104,7 @@ class ClienteDAO {
         try {
             $this->pdo->beginTransaction();
             $sql = 'UPDATE tb_cliente SET '
-                . 'nome=?, cpf=?, datanascimento=?, telefone=?, sexo=? '
+                . 'nome=?, cpf=?, datanascimento=?, telefone=?, sexo=?, foto=? '
                 . 'WHERE id=?';
             $stmt = $this->pdo->prepare( $sql );
             $stmt->bindValue( 1, $clienteDTO->getNome() );
@@ -112,7 +112,8 @@ class ClienteDAO {
             $stmt->bindValue( 3, $clienteDTO->getDataNascimento() );
             $stmt->bindValue( 4, $clienteDTO->getTelefone() );
             $stmt->bindValue( 5, $clienteDTO->getSexo() );
-            $stmt->bindValue( 6, $clienteDTO->getId() );
+            $stmt->bindValue( 6, $clienteDTO->getFoto() );
+            $stmt->bindValue( 7, $clienteDTO->getId() );
             $stmt->execute();
 
             $cliente = $this->findById( $clienteDTO->getId() );

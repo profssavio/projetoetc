@@ -133,6 +133,7 @@
                     </div>
                     <div class="col">
                         <div class="mb-3">
+                            <input type="hidden" name="fotoOriginal" value="<?php echo $cliente["foto"] ?>">
                             <label for="foto" class="form-label">Foto</label>
                             <input class="form-control" type="file" id="foto" name="foto">
                         </div>
