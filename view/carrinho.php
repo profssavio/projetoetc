@@ -18,6 +18,10 @@
             session_start();
             require_once '../dao/ProdutoDAO.php';
             $produtoDAO = new ProdutoDAO();
+            $total      = 0;
+            echo "<div>";
+            echo "  <a href='listarTodosProdutos.php'>Adicionar produtos</a>";
+            echo "<div>";
             if ( isset( $_SESSION['carrinho'] ) && !empty( $_SESSION['carrinho'] ) ) {
                 echo "<table class='table table-striped table-bordered'>";
                 echo "<thead>";
@@ -32,11 +36,12 @@
                 echo "<tbody>";
                 foreach ( $_SESSION['carrinho'] as $key => $qtde ) {
                     $produto = $produtoDAO->findById( $key );
+                    $total += $produto["preco"] * $qtde;
                     echo "<tr>";
                     echo "  <td> {$produto["nome"]}</td>";
                     echo "  <td> {$produto["preco"]}</td>";
                     echo "  <td> {$qtde}</td>";
-                    echo "  <td> R$ ", ( $produto["preco"] * $qtde ), "</td>";
+                    echo "  <td> R$ ", number_format(  ( $produto["preco"] * $qtde ), 2, ",", "." ), "</td>";
                     echo "  <td class='text-center'>";
                     echo "      <a href='../controller/carrinhoController.php?id={$produto["id"]}&acao=del'>Remover do carrinho</a>";
                     echo "  </td>";
@@ -45,7 +50,9 @@
                 }
                 echo "</tbody>";
                 echo "</table>";
-
+                echo "<div>";
+                echo "TOTAL R$ ", number_format( $total, 2, ",", "." );
+                echo "</div>";
             } else {
                 echo "Não existe produtos no carrinho!";
             }
