@@ -25,7 +25,6 @@
             echo "      <th>Descrição</th>";
             echo "      <th>Preço</th>";
             echo "      <th class='text-center'>Adicionar</th>";
-            echo "      <th class='text-center'>Remover</th>";
             echo "  </tr>";
             echo "</thead>";
             echo "<tbody>";
@@ -36,9 +35,6 @@
                 echo "  <td> {$produto["preco"]}</td>";
                 echo "  <td class='text-center'>";
                 echo "      <a href='../controller/carrinhoController.php?id={$produto["id"]}&acao=add'>Adicionar</a>";
-                echo "  </td>";
-                echo "  <td class='text-center'>";
-                echo "      <a href='../controller/carrinhoController.php?id={$produto["id"]}&acao=del'>Remover do carrinho</a>";
                 echo "  </td>";
                 echo "</tr>";
             }

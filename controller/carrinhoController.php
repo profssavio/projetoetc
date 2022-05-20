@@ -13,12 +13,12 @@ if ( $acao == "add" ) {
     } else {
         $_SESSION['carrinho'][$idProduto] += 1;
     }
-    print_r( $_SESSION['carrinho'] );
+    header( "Location: ../view/carrinho.php" );
 }
 
 if ( $acao == 'del' ) {
     if ( isset( $_SESSION['carrinho'][$idProduto] ) ) {
         unset( $_SESSION['carrinho'][$idProduto] );
     }
-    print_r( $_SESSION['carrinho'] );
+    header( "Location: ../view/carrinho.php" );
 }
