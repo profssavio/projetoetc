@@ -50,8 +50,15 @@
                 }
                 echo "</tbody>";
                 echo "</table>";
-                echo "<div>";
-                echo "TOTAL R$ ", number_format( $total, 2, ",", "." );
+                echo "<div class='row'>";
+                echo "  <div class='col-6'>";
+                echo "      TOTAL R$ ", number_format( $total, 2, ",", "." );
+                echo "  </div>";
+                echo "  <div class='col-6' style='text-align: right;'>";
+                echo "    <a href='../controller/finalizarComprarController.php'>";
+                echo "      <button>Finalizar compra</button>";
+                echo "    </a>";
+                echo "  </div>";
                 echo "</div>";
             } else {
                 echo "Não existe produtos no carrinho!";
@@ -61,3 +68,6 @@
 </body>
 
 </html>
+
+<div class="row">
+                    <div class="col-6">

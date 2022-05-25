@@ -13,11 +13,13 @@
 
 <body>
     <?php
-    session_start();
-    if ( !isset( $_SESSION["usuario"] ) ) {
-        header( "Location: ../index.php" );
-    }
-    echo "Usuario logado: {$_SESSION["usuario"]}";
+        session_start();
+        if ( !isset( $_SESSION["usuario"] ) ) {
+            header( "Location: ../index.php" );
+        }
+        echo "Usuario logado: {$_SESSION["usuario"]}";
+        echo "<br>";
+        echo "Id Cliente: {$_SESSION["idCliente"]}";
     ?>
 
 
