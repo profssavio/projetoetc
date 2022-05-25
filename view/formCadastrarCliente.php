@@ -8,8 +8,42 @@
     <title></title>
     <script src="../js/jquery-3.6.0.min.js"></script>
     <script src="../js/jquery.mask.min.js"></script>
+    <script src="../js/jquery-validation-1.19.3/dist/jquery.validate.min.js"></script>
     <link rel="stylesheet" href="../lib/bootstrap-5.1.3/css/bootstrap.min.css">
     <script src="../lib/bootstrap-5.1.3/js/bootstrap.min.js"></script>
+    <style>
+         .error{
+            color: #a94442;
+            font-style: italic;
+         }
+         .has-success .form-control {
+            border-color: #3c763d;
+            -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075)
+        }
+        .has-success .form-control:focus {
+            border-color: #2b542c;
+            -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 6px #67b168;
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 6px #67b168
+        }
+        .has-error .form-control {
+            border-color: #a94442;
+            -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075)
+        }
+
+        .has-error .form-control:focus {
+            border-color: #843534;
+            -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 6px #ce8483;
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 6px #ce8483
+        }
+        .has-success .checkbox,
+        .has-error .checkbox,
+
+        .checkbox input[type=checkbox],
+
+    </style>
+
 </head>
 
 <body>
@@ -20,14 +54,14 @@
     ?>
     <div class="container">
         <div class="col-md-12 mt-3">
-            <form id="formCadastroCliente" enctype="multipart/form-data"
-                action="../controller/cadastrarClienteController.php" method="post">
+            <form id="formCadastroCliente" enctype="multipart/form-data" action="../controller/cadastrarClienteController.php" method="post">
                 <div class="row">
                     <div class="col-6">
                         <div class="mb-3">
                             <label for="nome" class="form-label">Nome *</label>
-                            <input type="text" class="form-control" id="nome" name="nome"
-                                placeholder="Digite o seu nome" required>
+                            <span class="inputErro">
+                                <input type="text" class="form-control" id="nome" name="nome" placeholder="Digite o seu nome" required>
+                            </span>
                         </div>
                     </div>
                     <div class="col">
@@ -121,13 +155,65 @@
             }
         ?>
     </div>
-
-
     <script>
-    $(document).ready(function() {
-        $('#cpf').mask('000.000.000-00');
-        $('#tel').mask('(00) 00000-0000');
-    });
+        $(document).ready(function() {
+            $('#cpf').mask('000.000.000-00');
+            $('#tel').mask('(00) 00000-0000');
+        });
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("#formCadastroCliente").validate({
+                rules: {
+                    nome: "required",
+                    /* 					lastname: "required",
+                    					username: {
+                    						required: true,
+                    						minlength: 2
+                    					},
+                    					password: {
+                    						required: true,
+                    						minlength: 5
+                    					},
+                    					confirm_password: {
+                    						required: true,
+                    						minlength: 5,
+                    						equalTo: "#password"
+                    					},
+                    					email: {
+                    						required: true,
+                    						email: true
+                    					},
+                    					agree: "required" */
+                },
+                messages: {
+                    nome: "Por favor insira seu Nome",
+                    /* 					lastname: "Please enter your lastname",
+                    					username: {
+                    						required: "Please enter a username",
+                    						minlength: "Your username must consist of at least 2 characters"
+                    					},
+                    					password: {
+                    						required: "Please provide a password",
+                    						minlength: "Your password must be at least 5 characters long"
+                    					},
+                    					confirm_password: {
+                    						required: "Please provide a password",
+                    						minlength: "Your password must be at least 5 characters long",
+                    						equalTo: "Please enter the same password as above"
+                    					},
+                    					email: "Please enter a valid email address",
+                    					agree: "Please accept our policy" */
+                },
+                highlight: function(element, errorClass, validClass) {
+                    $(element).parents(".inputErro").addClass("has-error").removeClass("has-success");
+                },
+                unhighlight: function(element, errorClass, validClass) {
+                    $(element).parents(".inputErro").addClass("has-success").removeClass("has-error");
+                }
+            });
+        });
     </script>
 </body>
 
