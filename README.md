@@ -31,12 +31,13 @@ Projeto modelo do curso Técnico em Informática do turno matutino
 # Banco de dados
 
  - Mysql
+ - PHPMyAdmin
  - Workbench -  Uma ferramenta de gerenciamento de banco de dados amigável ao usuário chamada MySQL.
  - O Modelo está no diretório sql ```projetomodelodb.mwb```
 
 ## Docker
 
-- No projeto tem o arquivo ```docker-compose.yml``` com as configurações do MYSQL
+- No projeto tem o arquivo ```docker-compose.yml``` onde tem as com as configurações do container MYSQL e PHPMyAdmin
   
 * Iniciar o ambiente
 
