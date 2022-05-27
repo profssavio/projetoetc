@@ -34,7 +34,7 @@
                 echo "  <td> {$pedido["nome"]}</td>";
                 echo "  <td> {$pedido["id"]}</td>";
                 echo "  <td> ", date( "d/m/Y - H:m", strtotime( $pedido["data"] ) ), "</td>";
-                echo "  <td> {$pedido["total"]}</td>";
+                echo "  <td>R$ {$pedido["total"]}</td>";
                 echo "  <td align='center'>";
                 echo "      <button type='button' class='btn btn-primary' data-bs-toggle='modal' data-bs-target='#visualizarProdutos'>";
                 echo "          Visualizar";
