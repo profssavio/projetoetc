@@ -68,7 +68,9 @@
                     <div class="col">
                         <div class="mb-3">
                             <label for="cpf" class="form-label">Cpf</label>
-                            <input type="text" class="form-control" id="cpf" name="cpf" placeholder="Digite o seu cpf">
+                            <span class="inputErro">
+                                <input type="text" class="form-control" id="cpf" name="cpf" placeholder="Digite o seu cpf">
+                            </span>
                         </div>
                     </div>
                     <div class="col">
