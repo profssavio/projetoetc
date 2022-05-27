@@ -23,10 +23,10 @@
 
 Projeto modelo do curso Técnico em Informática do turno matutino
 
- - C - Create (criar) - criar um novo registro
- - R - Read (ler) - ler (exibir) as informações de um registro
- - U - Update (atualizar) - atualizar os dados do registro
- - D - Delete (apagar) - apagar um registro
+ - **C** - Create (criar) - criar um novo registro
+ - **R** - Read (ler) - ler (exibir) as informações de um registro
+ - **U** - Update (atualizar) - atualizar os dados do registro
+ - **D** - Delete (apagar) - apagar um registro
 
 # Banco de dados
 
@@ -37,7 +37,7 @@ Projeto modelo do curso Técnico em Informática do turno matutino
 
 ## Docker
 
-- No projeto tem o arquivo ```docker-compose.yml``` onde tem as com as configurações do container MYSQL e PHPMyAdmin
+- No projeto tem o arquivo ```docker-compose.yml``` onde tem as com as configurações do container **MYSQL** e **PHPMyAdmin**
   
 * Iniciar o ambiente
 
@@ -51,6 +51,8 @@ docker-compose down
 ```  
 
 ## Classe de Conexão
+
+- **ATENÇÃO:** Na classe conferir o nome do banco, usuário e senha
 
 ```
 <?php
