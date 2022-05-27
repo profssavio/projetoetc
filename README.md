@@ -34,6 +34,21 @@ Projeto modelo do curso Técnico em Informática do turno matutino
  - Workbench -  Uma ferramenta de gerenciamento de banco de dados amigável ao usuário chamada MySQL.
  - O Modelo está no diretório sql ```projetomodelodb.mwb```
 
+## Docker
+
+- No projeto tem o arquivo ```docker-compose.yml``` com as configurações do MYSQL
+  
+* Iniciar o ambiente
+
+```
+docker-compose up -d
+```
+* Parar o ambiente e remover os container
+
+```
+docker-compose down
+```  
+
 ## Classe de Conexão
 
 ```
