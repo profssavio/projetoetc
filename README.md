@@ -11,7 +11,7 @@
 - Editar o arquivo php.ini
   - Habilitar as linhas
      - extension_dir = "ext"
-	 - extension=pdo_mysql
+     - extension=pdo_mysql
 
 ## Terceiro passo
 - Se por acaso aparecer um erro que esta faltando a dll vcruntime140-dll
@@ -225,3 +225,74 @@ docker run -d -p 9002:9000 --name portainer \
 * Digitar no Browser: *http://localhost:9002*
 
 
+# Visual Code: 
+
+## Extensions
+
+* CodeSnap
+* Color Highlight
+* DotENV
+* IntelliSense for CSS class names in HTML
+* JavaScript (ES6) code snippets
+* Live Server
+* Path Intellisense
+* PHP Debug
+* PHP DocBlocker
+* PHP Getters & Setters
+* PHP Intelephense
+* PHP Namespace Resolver
+* PHP Server
+* phpfmt - PHP formatter
+* vscode-icons
+* Git History
+* GitLens — Git supercharged
+* REST Client
+
+## Configuração do Settings do Visual Code 
+
+```File -> Preferences -> Settings```
+
+* Logo após clicar no icone na direita:  ```Open Settings(JSON)``` Apagar tudo e colocar esse código abaixo no lugar.
+
+* Para Windows:
+
+```
+{
+    "workbench.iconTheme": "vscode-icons",
+    "workbench.colorTheme": "Quiet Light",
+    "editor.mouseWheelZoom": true,
+    "explorer.compactFolders": false,
+    "editor.fontSize": 16,
+    "editor.minimap.enabled": false,
+    "editor.rulers": [120],
+    "workbench.colorCustomizations": {
+        "editorRuler.foreground": "#4093ff"
+    },
+    "php.validate.executablePath": "C:\\xampp\\php\\php.exe",
+    "php.suggest.basic": false,
+    "php.validate.enable": false,
+    "phpserver.phpConfigPath": "C:\\xampp\\php\\php.ini",
+    "phpserver.phpPath": "C:\\xampp\\php\\php.exe",
+    "phpserver.browser": "chrome",
+    "editor.formatOnSave": false,
+    "[php]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "kokororin.vscode-phpfmt",
+       
+    },
+    "phpfmt.php_bin": "C:\\xampp\\php\\php.exe",
+    "phpfmt.psr2": false,
+    "phpfmt.enable_auto_align":true,
+    "phpfmt.exclude": [
+        "AllmanStyleBraces",
+    ],  
+    "phpfmt.passes": [
+        "AlignPHPCode",
+        "AlignDoubleArrow",
+        "SpaceAroundParentheses"
+    ],
+
+    "html.autoClosingTags": false,
+    "liveServer.settings.CustomBrowser": "chrome",
+}
+```
