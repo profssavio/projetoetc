@@ -1,5 +1,9 @@
 # Visual Code: 
 
+Um editor de código gratuito avançado e leve com ferramentas integradas 
+
+https://code.visualstudio.com/
+
 ## Extensions
 
 * CodeSnap
