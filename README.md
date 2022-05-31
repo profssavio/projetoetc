@@ -78,10 +78,6 @@ abstract class Conexao {
 }
 ```
 
-# Linguagem de Programação
-
-  - PHP
-
 ---
 
 # WSL2 + DOCKER (Windows)
