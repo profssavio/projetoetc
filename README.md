@@ -172,6 +172,8 @@ docker-compose --version
 ```
 Para instalar uma versão diferente do Compose, substitua 1.29.2 pela versão desejada.
 
+---
+
 # Configurações extras
 
 ## Ohmyzsh (Linux)
