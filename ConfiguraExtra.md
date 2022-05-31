@@ -1,4 +1,3 @@
-Meu Drive
 # Configurações basicas
 
 ## Ohmyzsh
