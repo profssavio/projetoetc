@@ -100,10 +100,12 @@ https://code.visualstudio.com/
 Exemplo: Se estiver colocado o PHP no diretório ```C:\php```
     
     ```
-    "php.validate.executablePath": "C:\\php\\php.exe",
-    "phpserver.phpConfigPath": "C:\\php\\php.ini",
-    "phpserver.phpPath": "C:\\php\\php.exe",
-    "phpfmt.php_bin": "C:\\php\\php.exe",
+    {
+        "php.validate.executablePath": "C:\\php\\php.exe",
+        "phpserver.phpConfigPath": "C:\\php\\php.ini",
+        "phpserver.phpPath": "C:\\php\\php.exe",
+        "phpfmt.php_bin": "C:\\php\\php.exe"
+    }
     ```
 
 ## Quarto passo
