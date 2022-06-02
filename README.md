@@ -152,6 +152,11 @@ O armazenamento é também uma importante questão que marca as diferenças entr
   * TVs
   * relógios e etc.  
 
+### DB Browser for SQLite
+
+É uma ferramenta visual para manipulação de bases de dados SQLite ```https://sqlitebrowser.org/```
+
+
 ## Docker
 
 - No projeto tem o arquivo ```docker-compose.yml``` onde tem as com as configurações do container **MYSQL** e **PHPMyAdmin**
