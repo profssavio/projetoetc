@@ -92,8 +92,21 @@ https://code.visualstudio.com/
   - Alterar os valores  
      - ```max_execution_time = 120```
      - ```upload_max_filesize = 5M```
-     
-## Terceiro passo
+
+## Terceiro passo  
+
+- Alterar os Settings do VScode para apontar para o diretorio correto.
+
+Exemplo: Se estiver colocado o PHP no diretório ```C:\php```
+    
+    ```
+    "php.validate.executablePath": "C:\\php\\php.exe",
+    "phpserver.phpConfigPath": "C:\\php\\php.ini",
+    "phpserver.phpPath": "C:\\php\\php.exe",
+    "phpfmt.php_bin": "C:\\php\\php.exe",
+    ```
+
+## Quarto passo
 - Se por acaso aparecer um erro que esta faltando a dll vcruntime140-dll
 - Instalar os Pacotes Redistribuíveis do Visual C++ para Visual Studio 2022
 - Site: https://visualstudio.microsoft.com/pt-br/downloads/
