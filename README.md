@@ -85,11 +85,14 @@ https://code.visualstudio.com/
 - Descompactar o php e colocar no diretorio c:\php\
 - Renomear o arquivo php.ini-development para php.ini
 - Editar o arquivo php.ini
-  - Habilitar as linhas
+  - Habilitar as linhas   
      - ```extension_dir = "ext"```
      - ```extension=pdo_mysql```
-  - Alterar o valor 120 seconds 
+     - 
+  - Alterar os valores  
      - ```max_execution_time = 120```
+     - ```upload_max_filesize = 5M```
+     
 ## Terceiro passo
 - Se por acaso aparecer um erro que esta faltando a dll vcruntime140-dll
 - Instalar os Pacotes Redistribuíveis do Visual C++ para Visual Studio 2022
