@@ -156,6 +156,11 @@ O armazenamento é também uma importante questão que marca as diferenças entr
 
 É uma ferramenta visual para manipulação de bases de dados SQLite ```https://sqlitebrowser.org/```
 
+### Além da classe PDO existe a classe SQLITE3
+
+* Documentação: 
+  * ```https://www.php.net/manual/pt_BR/book.pdo.php``` 
+  * ```https://www.php.net/manual/pt_BR/class.sqlite3.php```  
 
 ## Docker
 
