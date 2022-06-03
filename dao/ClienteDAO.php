@@ -162,4 +162,16 @@ class ClienteDAO {
         }
     }
 
+    public function alterarSituacao( $situacao, $id ) {
+        try {
+            $sql  = 'UPDATE tb_cliente SET situacao =? WHERE id= ?';
+            $stmt = $this->pdo->prepare( $sql );
+            $stmt->bindValue( 1, $situacao );
+            $stmt->bindValue( 2, $id );
+            return $stmt->execute();
+        } catch ( PDOException $e ) {
+            echo "Erro ao atualizar a situacao do cliente ", $e->getMessage();
+        }
+    }
+
 }
