@@ -129,38 +129,7 @@ Projeto modelo do curso Técnico em Informática do turno matutino
  - Mysql
  - PHPMyAdmin
  - Workbench -  Uma ferramenta de gerenciamento de banco de dados amigável ao usuário chamada MySQL.
- - O Modelo está no diretório sql ```projetomodelodb.mwb```
-
-## Banco de dados alternativo
-
-### SQLite
-
-O SQLite é uma base de dados relacional de código aberto e que dispensa o uso de um servidor na sua atuação. Armazenando seus arquivos dentro de sua própria estrutura, ele é capaz de funcionar muito bem em aplicações diversas, principalmente, websites de tráfego médio e sistemas mobile.
-
-### Como ele se diferencia do MySQL?
-Começando pela arquitetura, enquanto o SQLite não precisa de um servidor, o MySQL é totalmente dependente nesse sentido, sendo projetado de maneira distinta. Quanto ao domínio, o MySQL, apesar de código aberto, pertence à Oracle, enquanto o SQLite é público.
-
-Outra diferença principal é a compatibilidade de dados, muito mais ampla no MySQL, o que ajuda a entender a razão de ele ser mais popular. O SQLite trabalha de forma limitada, apenas com Integer, Real, Text e Blob.
-
-O armazenamento é também uma importante questão que marca as diferenças entre essas duas bases de dados. MySQL trabalha com um servidor de 600MB e SQLite disponibiliza 250KB em sua biblioteca. São diferenças marcantes, mas que também indicam por que SQLite costuma ser usado para aplicações mobile.
-
-### Em quais situações o SQLite pode ser utilizado?
-
-* Sites - O SQLite funciona muito bem para a maioria dos sites, com uma ressalva: desde que sejam aqueles que tenham um tráfego médio. Consegue entregar bom desempenho para sites que recebem cerca de 100 mil acessos diários
-* Dispositivos incorporados - O encaixe é perfeito com o SQLite pelo fato de ele trabalhar também de forma independente, sem que alguém precise administrá-lo.
-  * smartphones
-  * TVs
-  * relógios e etc.  
-
-### DB Browser for SQLite
-
-É uma ferramenta visual para manipulação de bases de dados SQLite ```https://sqlitebrowser.org/```
-
-### Além da classe PDO existe a classe SQLITE3
-
-* Documentação: 
-  * ```https://www.php.net/manual/pt_BR/book.pdo.php``` 
-  * ```https://www.php.net/manual/pt_BR/class.sqlite3.php```  
+ - O Modelo está no diretório sql ```projetomodelodb.mwb```  
 
 ## Docker
 
