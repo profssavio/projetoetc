@@ -8,6 +8,8 @@ Projeto modelo do curso Técnico em Informática do turno matutino
  - **U** - Update (atualizar) - atualizar os dados do registro
  - **D** - Delete (apagar) - apagar um registro
  
+No projeto existe um exemplo de carrinho de compras
+ 
 # Visual Code: 
 
 Um editor de código gratuito avançado e leve com ferramentas integradas 
