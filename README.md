@@ -1,3 +1,13 @@
+
+# Projeto Modelo - CRUD
+
+Projeto modelo do curso Técnico em Informática do turno matutino
+
+ - **C** - Create (criar) - criar um novo registro
+ - **R** - Read (ler) - ler (exibir) as informações de um registro
+ - **U** - Update (atualizar) - atualizar os dados do registro
+ - **D** - Delete (apagar) - apagar um registro
+ 
 # Visual Code: 
 
 Um editor de código gratuito avançado e leve com ferramentas integradas 
@@ -114,15 +124,6 @@ Exemplo: Se estiver colocado o PHP no diretório ```C:\php```
 - Site: https://visualstudio.microsoft.com/pt-br/downloads/
 - Na opção Outras ferramentas, Estruturas e Pacotes Redistribuíveis
 
-
-# Projeto Modelo - CRUD
-
-Projeto modelo do curso Técnico em Informática do turno matutino
-
- - **C** - Create (criar) - criar um novo registro
- - **R** - Read (ler) - ler (exibir) as informações de um registro
- - **U** - Update (atualizar) - atualizar os dados do registro
- - **D** - Delete (apagar) - apagar um registro
 
 # Banco de dados
 
