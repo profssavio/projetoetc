@@ -101,6 +101,7 @@ https://code.visualstudio.com/
      - ```extension_dir = "ext"```
      - ```extension=pdo_mysql```
      - ```extension=pdo_sqlite```
+     - ```date.timezone =``` tem que adicionar o valor timezone do Brasil ```America/Sao_Paulo```
   - Alterar os valores  
      - ```max_execution_time = 120```
      - ```upload_max_filesize = 5M```
