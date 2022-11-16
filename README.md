@@ -322,3 +322,22 @@ docker run -d -p 9002:9000 --name portainer \
 ```
 
 * Digitar no Browser: *http://localhost:9002*
+
+# Session em PHP
+
+É utilizado sessão para pegar valores em qualquer parte do seu sistema.
+
+```
+<?php
+session_start();
+$_SESSION['user'] = 'Alexandre';
+```
+Posso pegar nessa super global session com o identificador **user**
+
+```
+<?php
+session_start();
+if (isset($_SESSION['user'])){
+   var_dump($_SESSION['user']);
+}
+```
