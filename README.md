@@ -353,7 +353,7 @@ if (isset($_SESSION['user'])){
 
 ```
 <?php
-session_set_cookie_params(['lifetime'=> 10])
+session_set_cookie_params(['lifetime'=> 10, 'httponly' => true])
 
 session_start();
 
