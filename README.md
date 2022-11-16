@@ -86,6 +86,39 @@ https://code.visualstudio.com/
 }
 ```
 
+* Linux
+
+```
+{
+    "workbench.iconTheme": "vscode-icons",
+    "workbench.colorTheme": "Dracula",
+    "editor.mouseWheelZoom": true,
+    "explorer.compactFolders": false,
+    "editor.fontSize": 16,
+    "editor.minimap.enabled": false,
+    "editor.rulers": [120],
+  
+    "workbench.colorCustomizations": {
+      "editorRuler.foreground": "#4093ff"
+    },
+  
+    "editor.fontFamily": "Fira Code",
+    "editor.fontLigatures": true,
+    "editor.formatOnSave": false,
+
+    "php.validate.executablePath": "/usr/bin/php",
+    "php.suggest.basic": false,
+    "php.validate.enable": false,
+    "phpserver.phpConfigPath": "/etc/php/8.1/apache2/php.ini",
+    "phpserver.phpPath": "/usr/bin/php",
+
+    "[php]": {
+      "editor.formatOnSave": true
+    }
+
+  }
+```  
+
 # Instalação do PHP no Windows
 
 ## Primeiro passo:
