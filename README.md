@@ -325,6 +325,8 @@ docker run -d -p 9002:9000 --name portainer \
 
 # Session em PHP
 
+## Básico
+
 É utilizado sessão para pegar valores em qualquer parte do seu sistema.
 
 ```
@@ -341,3 +343,26 @@ if (isset($_SESSION['user'])){
    var_dump($_SESSION['user']);
 }
 ```
+
+## Avançado
+
+- Através do session id ele cria um cookie no navegador
+- Em qualquer parte do seu sistema vai pegar esse cookie e verificar a sessão
+- Tempo de vida ocorre quando o navegador e fechado ou alterado o  ```session.cookie_lifetime``` 
+- **session_set_cookie_params** https://www.php.net/manual/en/function.session-set-cookie-params.php
+
+```
+<?php
+session_set_cookie_params(['lifetime'=> 10])
+
+session_start();
+
+var_dump(session_id());
+
+$_SESSION['user'] = 'Alexandre';
+$_SESSION['person'] = [
+   'name' => 'Alexandre',
+   'age' => 40
+];
+```
+
