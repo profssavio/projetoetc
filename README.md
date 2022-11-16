@@ -18,6 +18,7 @@ https://code.visualstudio.com/
 
 ## Extensions
 
+* Dracula Official
 * CodeSnap
 * Color Highlight
 * DotENV
@@ -48,7 +49,7 @@ https://code.visualstudio.com/
 ```
 {
     "workbench.iconTheme": "vscode-icons",
-    "workbench.colorTheme": "Quiet Light",
+    "workbench.colorTheme": "Dracula",
     "editor.mouseWheelZoom": true,
     "explorer.compactFolders": false,
     "editor.fontSize": 16,
@@ -57,32 +58,20 @@ https://code.visualstudio.com/
     "workbench.colorCustomizations": {
         "editorRuler.foreground": "#4093ff"
     },
+    
+    "editor.fontFamily": "Fira Code",
+    "editor.fontLigatures": true,
+    "editor.formatOnSave": false,
+    
     "php.validate.executablePath": "C:\\xampp\\php\\php.exe",
     "php.suggest.basic": false,
     "php.validate.enable": false,
     "phpserver.phpConfigPath": "C:\\xampp\\php\\php.ini",
     "phpserver.phpPath": "C:\\xampp\\php\\php.exe",
-    "phpserver.browser": "chrome",
-    "editor.formatOnSave": false,
-    "[php]": {
-        "editor.formatOnSave": true,
-        "editor.defaultFormatter": "kokororin.vscode-phpfmt",
-       
-    },
-    "phpfmt.php_bin": "C:\\xampp\\php\\php.exe",
-    "phpfmt.psr2": false,
-    "phpfmt.enable_auto_align":true,
-    "phpfmt.exclude": [
-        "AllmanStyleBraces",
-    ],  
-    "phpfmt.passes": [
-        "AlignPHPCode",
-        "AlignDoubleArrow",
-        "SpaceAroundParentheses"
-    ],
 
-    "html.autoClosingTags": false,
-    "liveServer.settings.CustomBrowser": "chrome",
+    "[php]": {
+        "editor.formatOnSave": true       
+    }
 }
 ```
 
@@ -383,6 +372,7 @@ if (isset($_SESSION['user'])){
 - Em qualquer parte do seu sistema vai pegar esse cookie e verificar a sessão
 - Tempo de vida ocorre quando o navegador e fechado ou alterado o  ```session.cookie_lifetime``` 
 - **session_set_cookie_params** https://www.php.net/manual/en/function.session-set-cookie-params.php
+- Depois do login você pode mandar gerar outro id ```session_regenerate_id(true)```
 
 ```
 <?php
