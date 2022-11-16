@@ -366,7 +366,7 @@ if (isset($_SESSION['user'])){
 }
 ```
 
-## Avançado
+## Avançado - Se proteger contra roubo de sessão
 
 - Através do session id ele cria um cookie no navegador
 - Em qualquer parte do seu sistema vai pegar esse cookie e verificar a sessão
