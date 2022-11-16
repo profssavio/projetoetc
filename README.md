@@ -389,3 +389,8 @@ $_SESSION['person'] = [
 ];
 ```
 
+# FiraCode
+
+É uma fonte desenvolvida para programadores. Ela possui "ligatures". Isso permite que alguns símbolos sejam mais legíveis. 
+
+- https://github.com/tonsky/FiraCode
