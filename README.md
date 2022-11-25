@@ -400,3 +400,25 @@ $_SESSION['person'] = [
 É uma fonte desenvolvida para programadores. Ela possui "ligatures". Isso permite que alguns símbolos sejam mais legíveis. 
 
 - https://github.com/tonsky/FiraCode
+
+# Instalar outras versões do PHP (LINUX)
+
+```
+sudo apt install php7.4
+```
+
+```
+sudo apt install php7.4-bcmath php7.4-bz2 php7.4-curl php7.4-gd php7.4-intl php7.4-json php7.4-redis php7.4-mbstring php7.4-mcrypt php7.4-xml php7.4-xmlrpc php7.4-zip php7.4-mysql
+```
+
+```
+sudo update-alternatives --config php
+```
+
+* Para selecionar a versão do PHP que irá trabalhar com o Apache, primeiro desabilite a versão atual com o comando a2dismod e depois habilite a versão que precisa com o comando a2enmod:
+
+```
+sudo a2dismod php8.1
+sudo a2enmod php7.4
+sudo systemctl restart apache2
+```
