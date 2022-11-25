@@ -172,6 +172,12 @@ docker-compose up -d
 docker-compose down
 ```  
 
+* Compilar novamente o DockerFile
+
+```  
+docker compose build --no-cache
+```  
+
 ## Classe de Conexão
 
 - **ATENÇÃO:** Na classe conferir o nome do banco, usuário e senha
