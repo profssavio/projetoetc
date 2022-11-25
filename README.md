@@ -403,14 +403,17 @@ $_SESSION['person'] = [
 
 # Instalar outras versões do PHP (LINUX)
 
+* Instalar a versão desejada
 ```
 sudo apt install php7.4
 ```
 
+* Instalar os modulos
 ```
 sudo apt install php7.4-bcmath php7.4-bz2 php7.4-curl php7.4-gd php7.4-intl php7.4-json php7.4-redis php7.4-mbstring php7.4-mcrypt php7.4-xml php7.4-xmlrpc php7.4-zip php7.4-mysql
 ```
 
+* Selecionar a versão do PHP
 ```
 sudo update-alternatives --config php
 ```
